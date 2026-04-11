@@ -14,7 +14,7 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 
 ## 🏗 Architecture
   
-screenshots/Architecture.png
+![Architecture](screenshots/Architecture.png)
 
 
 ## ✨ Features
