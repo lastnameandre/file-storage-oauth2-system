@@ -77,3 +77,15 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 ## 🔐 Environment Variables
 
 DB_PASSWORD=your_password
+
+## Demo Login
+
+username: user1  
+password: password
+
+How to Run
+
+1. Start auth-server
+2. Start resource-server
+3. Start client
+4. Open localhost:8080
