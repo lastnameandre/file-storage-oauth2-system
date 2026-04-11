@@ -13,6 +13,7 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 ✔ Scope-based Access Control
 
 ## 🏗 Architecture
+<img width="738" height="434" alt="image" src="https://github.com/user-attachments/assets/3099db28-a5e0-4424-a193-6acbfd4cfa08" />
 
 [OAuth2 Authorization Server] <--JWT--> [Resource Server API] <--REST--> [Thymeleaf Client]
 
