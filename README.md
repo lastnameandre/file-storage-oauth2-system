@@ -13,7 +13,25 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 ✔ Scope-based Access Control
 
 ## 🏗 Architecture
-<img width="738" height="434" alt="image" src="https://github.com/user-attachments/assets/3099db28-a5e0-4424-a193-6acbfd4cfa08" />
+                ┌──────────────────────────┐
+                │ OAuth2 Authorization     │
+                │ Server (9000)            │
+                │ - Login                  │
+                │ - Consent                │
+                │ - JWT Tokens             │
+                └──────────┬───────────────┘
+                           │
+                           │ Access Token
+                           ▼
+
+┌──────────────────────┐        REST API        ┌──────────────────────┐
+│ Client App           │ ─────────────────────▶ │ Resource Server      │
+│ Thymeleaf (8080)     │                        │ File Storage API     │
+│ - Login              │ ◀───────────────────── │ - Upload             │
+│ - File Dashboard     │        JSON/Data       │ - Download           │
+└──────────────────────┘                        │ - Delete             │
+                                                │ - JWT Validation     │
+                                                └──────────────────────┘
 
 [OAuth2 Authorization Server] <--JWT--> [Resource Server API] <--REST--> [Thymeleaf Client]
 
@@ -60,13 +78,22 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 4. Download or delete files
 5. Test API via Swagger UI
 
+
 ## 📊 Architecture Diagram
 
-
-+----------------+ +-------------------+ +-----------------+
-| Thymeleaf UI | ---> | Resource Server | <---> | Authorization |
-| (Client App) | | REST API + JWT | | Server OAuth2 |
-+----------------+ +-------------------+ +-----------------+
++-------------------+       +------------------------+       +----------------------+
+| Client App        | ----> | Authorization Server   | ----> | JWT Access Token     |
+| Thymeleaf (8080)  |       | OAuth2 / OIDC (9000)   |       | issued to client     |
++-------------------+       +------------------------+       +----------------------+
+        |
+        | Bearer Token + REST Calls
+        v
++------------------------+
+| Resource Server        |
+| File API (8081)        |
+| Upload / Download      |
+| Delete / Validate JWT  |
++------------------------+
 
 
 ## 💡 Use Cases
