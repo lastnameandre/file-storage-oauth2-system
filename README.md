@@ -13,27 +13,8 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 ✔ Scope-based Access Control
 
 ## 🏗 Architecture
-                ┌──────────────────────────┐
-                │ OAuth2 Authorization     │
-                │ Server (9000)            │
-                │ - Login                  │
-                │ - Consent                │
-                │ - JWT Tokens             │
-                └──────────┬───────────────┘
-                           │
-                           │ Access Token
-                           ▼
+    <img width="1700" height="1048" alt="image" src="https://github.com/user-attachments/assets/0f2bbadf-0d7c-4361-b898-8190411d2539" />
 
-┌──────────────────────┐        REST API        ┌──────────────────────┐
-│ Client App           │ ─────────────────────▶ │ Resource Server      │
-│ Thymeleaf (8080)     │                        │ File Storage API     │
-│ - Login              │ ◀───────────────────── │ - Upload             │
-│ - File Dashboard     │        JSON/Data       │ - Download           │
-└──────────────────────┘                        │ - Delete             │
-                                                │ - JWT Validation     │
-                                                └──────────────────────┘
-
-[OAuth2 Authorization Server] <--JWT--> [Resource Server API] <--REST--> [Thymeleaf Client]
 
 
 ## ✨ Features
