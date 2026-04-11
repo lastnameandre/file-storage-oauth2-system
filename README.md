@@ -1,14 +1,16 @@
-# File Storage Service (OAuth2) – Java Spring Boot
+# File Storage Service (OAuth2)
 
-📁 **File Storage Service** is a full-featured web application for managing files, designed to demonstrate modern **OAuth2 authentication and authorization with JWT**.
+Secure microservice-based file storage platform built with Java Spring Boot.
 
-## 🚀 Technologies
-- Java 17, Spring Boot 3
-- Spring Security, OAuth2, JWT
-- Thymeleaf (server-side UI)
-- REST API
-- MySQL / H2 Database
-- SpringDoc OpenAPI (Swagger UI)
+### 🚀 Tech Stack
+Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
+
+### 📌 Features
+✔ OAuth2 Authorization Server  
+✔ JWT-secured Resource Server  
+✔ File Upload / Download / Delete  
+✔ Swagger UI API Docs  
+✔ Scope-based Access Control
 
 ## 🏗 Architecture
 
