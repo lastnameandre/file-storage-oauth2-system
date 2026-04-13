@@ -76,6 +76,16 @@ password: `password`
 
 ---
 
+💡 Use Cases
+
+Learn OAuth2 & JWT in real projects
+
+Secure backend for file management
+
+API integration starter project
+
+---
+
 ## 🌍 Environment Variables
 
 ```env
