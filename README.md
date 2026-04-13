@@ -62,20 +62,7 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 
 ## 📊 Architecture Diagram
 
-+-------------------+       +------------------------+       +----------------------+
-| Client App        | ----> | Authorization Server   | ----> | JWT Access Token     |
-| Thymeleaf (8080)  |       | OAuth2 / OIDC (9000)   |       | issued to client     |
-+-------------------+       +------------------------+       +----------------------+
-        |
-        | Bearer Token + REST Calls
-        v
-+------------------------+
-| Resource Server        |
-| File API (8081)        |
-| Upload / Download      |
-| Delete / Validate JWT  |
-+------------------------+
-
+![ArchitectureDiagram](screenshots/Architecture_Diagram.png)
 
 ## 💡 Use Cases
 - Learning OAuth2 and JWT in real projects
