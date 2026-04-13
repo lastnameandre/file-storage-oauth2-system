@@ -2,97 +2,81 @@
 
 Secure microservice-based file storage platform built with Java Spring Boot.
 
-### 🚀 Tech Stack
+## 🚀 Tech Stack
+
 Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 
-### 📌 Features
+---
+
+## 📌 Key Features
+
 ✔ OAuth2 Authorization Server  
 ✔ JWT-secured Resource Server  
 ✔ File Upload / Download / Delete  
 ✔ Swagger UI API Docs  
-✔ Scope-based Access Control
+✔ Scope-based Access Control  
+✔ Authorization Code + Refresh Token  
 
-## 📸 UI Demo (Client screenshots)
-Get an access token for Swagger UI
-![client_token](screenshots/client-ui-get_access_token.png)
+---
 
-Share a link, select a file to upload
-![client_main](screenshots/client-ui.png)
+## 📸 UI Demo
 
-## 📸 API Documentation
-(Swagger screenshots)
+### Get Access Token
+![Client Token](screenshots/client-ui-get_access_token.png)
 
+### Main Dashboard
+![Client Main](screenshots/client-ui.png)
+
+---
+
+## 📸 Swagger API Documentation
+
+### Swagger UI
+![Swagger](screenshots/swagger-unauthorized.png)
+
+### Authorized Testing
+![Swagger Authorized](screenshots/swagger-authorized.png)
+
+---
 
 ## 🏗 Architecture
-  
+
 ![Architecture](screenshots/Architecture.png)
 
-
-## ✨ Features
-
-### 🔹 Frontend (Thymeleaf)
-- OAuth2 login (Authorization Code flow)
-- Upload files
-- View personal file list
-- Download and delete files
-
-### 🔹 Authorization Server
-- Custom OAuth2 Authorization Server
-- Authorization Code + Refresh Token support
-- OpenID Connect support
-- In-memory users for demo
-
-### 🔹 Resource Server
-- REST API `/api/files`
-- JWT-based authentication
-- Scope-based authorization:
-  - `files.read` → GET requests
-  - `files.write` → POST / DELETE
-
-### 🔹 API Documentation (Swagger)
-- Auto-generated OpenAPI docs
-- Swagger UI interface
-- **Authorize button for JWT testing**
-- Full CRUD testing via UI
-
-## ⚙️ Getting Started
-
-1. Run Authorization Server → http://localhost:9000  
-2. Run Resource Server → http://localhost:8081  
-3. Run Client App → http://localhost:8080  
-4. Open Swagger UI → http://localhost:8081/swagger-ui.html  
-
-## 📌 Usage
-
-1. Login via OAuth2
-2. Upload a file
-3. View your files
-4. Download or delete files
-5. Test API via Swagger UI
-
+---
 
 ## 📊 Architecture Diagram
 
-![ArchitectureDiagram](screenshots/Architecture_Diagram.png)
+Client App (8080)  
+↓ OAuth2 Login  
 
-## 💡 Use Cases
-- Learning OAuth2 and JWT in real projects
-- Backend system for file management
-- Integration with mobile or SPA frontend
-- Demo project for portfolio / Fiverr / freelance
+Authorization Server (9000)  
+↓ JWT Token  
 
-## 🔐 Environment Variables
+Resource Server API (8081)  
+↓  
 
+MySQL Database
+
+---
+
+## ⚙️ Getting Started
+
+1. Run Authorization Server → `localhost:9000`
+2. Run Resource Server → `localhost:8081`
+3. Run Client App → `localhost:8080`
+4. Open Swagger UI → `localhost:8081/swagger-ui.html`
+
+---
+
+## 🔐 Demo Credentials
+
+username: `user1`  
+password: `password`
+
+---
+
+## 🌍 Environment Variables
+
+```env
 DB_PASSWORD=your_password
-
-## Demo Login
-
-username: user1  
-password: password
-
-How to Run
-
-1. Start auth-server
-2. Start resource-server
-3. Start client
-4. Open localhost:8080
