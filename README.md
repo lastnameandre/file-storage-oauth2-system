@@ -12,6 +12,10 @@ Java 17 • Spring Boot 3 • OAuth2 • JWT • MySQL • Swagger • Thymeleaf
 ✔ Swagger UI API Docs  
 ✔ Scope-based Access Control
 
+## 📸 UI Demo
+(Client screenshots)
+![client_main](screenshots/client-ui.png)
+
 ## 🏗 Architecture
   
 ![Architecture](screenshots/Architecture.png)
