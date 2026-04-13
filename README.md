@@ -76,13 +76,14 @@ password: `password`
 
 ---
 
-💡 Use Cases
+## 💡 Use Cases
 
-Learn OAuth2 & JWT in real projects
-
-Secure backend for file management
-
-API integration starter project
+- Learning OAuth2 and JWT with real project architecture
+- Backend starter for file management systems
+- Secure REST API template for future SaaS products
+- Integration with mobile / React / Angular frontend
+- Portfolio project for Fiverr / freelance clients
+- Example of microservice communication in Spring Boot
 
 ---
 
